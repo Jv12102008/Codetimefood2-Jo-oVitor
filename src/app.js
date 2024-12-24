@@ -118,7 +118,7 @@ function whatsApp() {
     valorSobremesa.toFixed(2) +
     ", " +
     " Total: R$" +
-     total.toFixed(2) + ". " + "O meus dados por contato são: "+ nomeDeUsuarioContato + " e " + enderecoContato ;
+     total.toFixed(2) + ". " + "O meus dados para contato são: "+ nomeDeUsuarioContato + " e " + enderecoContato ;
 
   let urlWhatsApp = "https://wa.me/" + numero + "?text=" + mensagemFormatada;
   window.open(urlWhatsApp, "_blank");
