@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeTimeFood</title>
+    <link rel="stylesheet" href="./src/reset.css" />
+    <link rel="stylesheet" href="./src/stiley.css" />
+  </head>
+  <body>
+    <div class="conteiner">
+      <!-- Tela inicial do app -->
+      <div class="telaDeEntrada ">
+        <div class="boxTelaDeEntrada">
+          <img class="logo" src="./src/imagens/69429780 (2).png" alt="" />
+          <a onclick="login()" class="botaoLogin">Login</a>
+          <a onclick="cadastro()" class="botaoCadastro">Cadastro</a>
+        </div>
+      </div>
+      <!-- Opição da tela de login -->
+      <div class="telaDeLogin escondido">
+        <div class="boxTelaDeLogin">
+          <div class="titulo">Entre na sua conta</div>
+          <form id="entrar" class="login">
+
+           <div class="login-conteudo">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Digite o seu email" id="emailLogin">
+            <a>Mensagem de erro</a>
+           </div>
+
+            <div class="login-conteudo">
+              <label for="password"> Senha</label>
+              <input
+                type="password"
+                id="senhaLogin"
+                placeholder="Coloque sua Senha"
+              />
+              <a>Mensagem de erro</a>
+            </div>
+
+            <button type="submit">Logar</button>
+          </form>
+        </div>
+      </div>
+      <!-- Opição da tela de cadastro -->
+      <div class="telaDeCadastro escondido">
+        <div class="boxTelaDeCadastro">
+          <div class="titulo">Crie sua conta</div>
+
+          <form id="form" class="form">
+            <div class="form-conteudo">
+              <label for="username"> Nome do Usuário</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Digite o nome do usuário"
+              />
+              <a>Mensagem de erro</a>
+            </div>
+
+            <div class="form-conteudo">
+              <label for="email"> Email</label>
+              <input type="email" id="emailColocado" placeholder="Digite o seu email" />
+              <a>Mensagem de erro</a>
+            </div>
+
+            <div class="form-conteudo">
+              <label for="endereco"> Endereço do Usuário</label>
+              <input
+                type="text"
+                id="endereco"
+                placeholder="Digite o seu Endereço"
+              />
+              <a>Mensagem de erro</a>
+            </div>
+
+            <div class="form-conteudo">
+              <label for="password-supper"> Senha</label>
+              <input
+                type="password"
+                id="senhaCriada"
+                placeholder="Crie uma Senha"
+              />
+              <a>Mensagem de erro</a>
+            </div>
+
+            <div class="form-conteudo">
+              <label for="password-confirmation"> Confira sua Senha</label>
+              <input
+                type="password"
+                id="senhaConferida"
+                placeholder="Digite sua Senha"
+              />
+              <a>Mensagem de erro</a>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+          </form>
+        </div>
+      </div>
+      <!--     tela de conteudo onde vai ter o cardapio  -->
+      <div class="telaDeConteudo escondido">
+        <div class="boxTelaDeConteudo">
+          <header>
+            <nav>
+              <ul>
+                <li>
+                  <img
+                    class="logo"
+                    src="./src/imagens/69429780 (2).png"
+                    alt=""
+                  />
+                </li>
+                <li>
+                  <img
+                    class="icon"
+                    src="./src/imagens/person-outline.svg"
+                    alt=""
+                  />
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <div id="itens">
+            <div id="prato">
+              <h2><strong>Primeiro seu prato</strong></h2>
+
+              <div id="pratos">
+                <div
+                  onclick="selecionarPrato('hamburguer',35.86)"
+                  class="prato hamburguer"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH6fJEY96FpW-f5tf7FHvuUOwD_PJNIBOMZw&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Hambúrguer</strong></div>
+                    <div class="descricao">Um delicioso hambúrguer</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 35,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('lasanha',72.99)"
+                  class="prato lasanha"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVTWXVL03lQ_cdwdIa4OsWpmzJ1ufcaqUO9A&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Lasanha</strong></div>
+                    <div class="descricao">Uma deliciosa Lasanha</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 72,99</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('hotDog',27.90)"
+                  class="prato hotDog"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjoxbusYkiUvT0MhVNzPjGxtWGLY8UbD2oNg&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Hot Dog</strong></div>
+                    <div class="descricao">Um delicioso Hot Dog</div>
+                    <div class="valor">
+                      <strong>
+                        <R1> R$ 27,90</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('cookie',20.86)"
+                  class="prato cookie"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeruW8QIJmgjz8uspAo067GdX0lBeo2CXOTw&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Cookie</strong></div>
+                    <div class="descricao">Um delicioso Cookie</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 20,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('pizza',40.86)"
+                  class="prato pizza"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHw3_LL93VcyN91EuZZidayTK1jHQ4L4mJrQ&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Pizza</strong></div>
+                    <div class="descricao">Uma deliciosa Pizza</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 40,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('chocoliteCake',46.86)"
+                  class="prato chocoliteCake"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqYUUnvZ8MX7LA67SEuxFx9grB9x_XiUM9uw&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Chocolite Cake</strong></div>
+                    <div class="descricao">Um delicioso Chocolite Cake</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 46,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('orangeCake',46.86)"
+                  class="prato orangeCake"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwe_Dpe_piCqYaKDPcM3oePKlFTJid0v8qkg&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Orange Cake</strong></div>
+                    <div class="descricao">Um delicioso Orange Cake</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 46,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('carrotCake',46.86)"
+                  class="prato carrotCake"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIlr7F6vNJOL2DI1YNl1qtvZGL5u61TwXO1w&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Carrot Cake</strong></div>
+                    <div class="descricao">Um delicioso Carrot Cake</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 46,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('spaghetti',32.86)"
+                  class="prato spaghetti"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHCV5-taodYWJ8nbnx249hmfQ5CvmCby6vcw&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Spaghetti</strong></div>
+                    <div class="descricao">Um delicioso Spaghetti</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 32,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('gnocchi',34.46)"
+                  class="prato gnocchi"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG-H89BcZQA9S0Hjr3xN3FEJ_kOzKHgGSSUQ&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Gnocchi</strong></div>
+                    <div class="descricao">Um delicioso Gnocchi</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 34,46</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('meatHide', 40.80)"
+                  class="prato meatHide"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7P4RQtW8DdeMVVfGh4UrBHclerc_psFVIgw&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Meat Hide</strong></div>
+                    <div class="descricao">Um delicioso Meat Hide</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 40,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('lemonCake',46.86)"
+                  class="prato lemonCake"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ0186Tv5fFUUMP-tBHoQGQPBrouCbnGGzSg&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Lemon Cake</strong></div>
+                    <div class="descricao">Um delicioso Lemon Cake</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 46,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('yakisoba',20.99)"
+                  class="prato yakisoba"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlPgP_ZutMyNG9VC_Gr7ntYJ66nspjtFXypA&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Yakisoba</strong></div>
+                    <div class="descricao">Um delicioso Yakisoba</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 20,99</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('babercue',70.86)"
+                  class="prato babercue"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvfQbIgYvPVEwELM6D5tyH2Yf4GJiqrQKsMQ&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Babercue</strong></div>
+                    <div class="descricao">Um delicioso Babercue</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 70,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarPrato('bucketOfChiken',57.24)"
+                  class="prato bucketOfChiken"
+                >
+                  <img
+                    src="https://http2.mlstatic.com/D_NQ_NP_859235-MLB54403154117_032023-O.webp"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong> Bucket Of Chiken</strong></div>
+                    <div class="descricao">Um delicioso Bucket Of Chiken</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 57,24</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="drink">
+              <h2><strong>Agora escolha a seu drink</strong></h2>
+
+              <div id="drinks">
+                <div
+                  onclick="selecionarDrink('guarana',17.86)"
+                  class="drink guarana"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKB0PLbIQM-Lq-SmatlG2dlMCpvXm-JdQIdA&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Guaraná Antartica</strong></div>
+                    <div class="descricao">
+                      Um guaraná geladinho e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 17,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div onclick="selecionarDrink('coke',17.86)" class="drink coke">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8XllBk6Yb7T0OZuc-tbX57Xvugl4pDiZDaQ&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Coke</strong></div>
+                    <div class="descricao">
+                      Uma Coke geladinha e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 17,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarDrink('pepis',17.86)"
+                  class="drink pepis"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVBpSs_-_W75knJfpwbFnV1vHoGgSGZNIM7Q&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Pepis</strong></div>
+                    <div class="descricao">
+                      Uma Pepis geladinha e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 17,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarDrink('zeroCoke',18.86)"
+                  class="drink zeroCoke"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTURyqQxpYaoRyMFMLigOyhxoauCaQzYo2rZQ&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Zero Coke</strong></div>
+                    <div class="descricao">
+                      Uma Zero Coke geladinha e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 18,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarDrink('zeroPepis',18.86)"
+                  class="drink zeroPepis"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpfrC8MkQB_1Q4Mhfv4Zsis6X2MKg5-x821g&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Zero Pepis</strong></div>
+                    <div class="descricao">
+                      Uma Zero Pepis geladinha e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 18,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarDrink('zeroGuarana',18.86)"
+                  class="drink zeroGuarana"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwZHebiOGe4uZBV__IegE5QBioxcjHCyZ2dw&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo">
+                      <strong>Zero Guaraná Antartica</strong>
+                    </div>
+                    <div class="descricao">
+                      Um zero guaraná geladinho e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 18,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarDrink('fanta',17.86)"
+                  class="drink fanta"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNgi5EOYqTwlsWyOPiIP_HpFIgcPyJZ7a-1Q&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Fanta</strong></div>
+                    <div class="descricao">
+                      Uma Fanta geladinha e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 17,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarDrink('zeroFanta',18.86)"
+                  class="drink zeroFanta"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiApRAxZXifqDmKv0Hd4qoaxdo0XWcik_ZvA&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Zero Fanta</strong></div>
+                    <div class="descricao">
+                      Uma Zero Fanta geladinha e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 18,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarDrink('orangeJuice',20.86)"
+                  class="drink orangeJuice"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRZMI1BhxMmeH9cSCuS2PZQ8X9EjPzxubFQg&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Orange Juice</strong></div>
+                    <div class="descricao">
+                      Um Orange Juice geladinho e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 20,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarDrink('grapeJuice',20.86)"
+                  class="drink grapeJuice"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW7q3XPl4VnGK6eEboeSUzBfyz_qZq89KCxQ&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Grape Juice</strong></div>
+                    <div class="descricao">
+                      Um Grape Juice geladinho e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 20,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarDrink('acerolaJuice',20.86)"
+                  class="drink acerolaJuice"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-G_lhbKnM6KXZ164j0erxk1_wQC5a-Yq3MQ&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Acerola Juice</strong></div>
+                    <div class="descricao">
+                      Um Acerola Juice geladinho e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 20,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarDrink('strawberryJuice',20.86)"
+                  class="drink strawberryJuice"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFCQ5wi8r-WJ-eNBAG7RVUPg8lIVBOKGgYFg&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Strawberry Juice</strong></div>
+                    <div class="descricao">
+                      Um Strawberry Juice geladinho e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 20,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarDrink('limonade',20.86)"
+                  class="drink limonade"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHqHDtLeOpJ9_2FBaW3NiIRfa6uMFIir1GPw&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Limonade</strong></div>
+                    <div class="descricao">
+                      Uma Limonade geladinha e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 20,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarDrink('pineappleJuice',20.86)"
+                  class="drink pineappleJuice"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwCpBL8sBQnp7QZQWBADMecGp0cr2rGFpb0w&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Pineapple Juice</strong></div>
+                    <div class="descricao">
+                      Um Pineapple Juice geladinho e refrescante
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 20,86</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="sobremesa">
+              <h2><strong>Por último escolha a sua sobremesa</strong></h2>
+
+              <div id="sobremesas">
+                <div
+                  onclick="selecionarSobremesa('pudim',10.00)"
+                  class="sobremesa pudim"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThezoCtbIpbzBt33Lh3j7cLhZ2rIh38bSI8w&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Pudim</strong></div>
+                    <div class="descricao">Um delicioso e saboroso pudim</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 10,00</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('iceCream',65.00)"
+                  class="sobremesa iceCream"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_f3Vt2Bl439T-VetyOaTYyi4hjpHpmXJ-oQ&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Ice Cream</strong></div>
+                    <div class="descricao">
+                      Um delicioso e saboroso Ice Cream
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 65,00</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('brigadier',15.50)"
+                  class="sobremesa brigadier"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkd2iepPAw3gGrFnsBQBLEb61NBGQRMK3DTg&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Brigadier</strong></div>
+                    <div class="descricao">
+                      Um delicioso e saboroso Brigadier
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 15,50</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('acai',25.50)"
+                  class="sobremesa acai"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcArlgxXqJnFFgEsOyEr7XC7yjRoOBZBDOTg&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Açaí</strong></div>
+                    <div class="descricao">Um delicioso e saboroso Açaí</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 25,50</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('passionFruitMousse',8.00)"
+                  class="sobremesa passionFruitMousse"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTRt4mogy9Q0pUqc5WI-W6t_0rxRxdPngL-A&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo">
+                      <strong>Passion Fruit Mousse</strong>
+                    </div>
+                    <div class="descricao">
+                      Um delicioso e saboroso Passion Fruit Mousse
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 8,00</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('limonMousse',8.00)"
+                  class="sobremesa limonMousse"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_s2m6at82vpLTUHhR2SY4QNNayceBProaeg&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Limon Mousse</strong></div>
+                    <div class="descricao">
+                      Um delicioso e saboroso Limon Mousse
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 8,50</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('StrawberryMousse',8.00)"
+                  class="sobremesa StrawberryMousse"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlrsB2WPx4bwmVl1LpQAUvnfi4Vejx-aY2dw&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Strawberry Mousse</strong></div>
+                    <div class="descricao">
+                      Um delicioso e saboroso Strawberry Mousse
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 8,00</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('chocoliteMousse',8.00)"
+                  class="sobremesa chocoliteMousse"
+                >
+                  <img
+                  src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb5YshcKHQ5VUVt015JDy46YXvzyEM5J4_Jg&s"
+                  alt="" />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Chocolite Mousse</strong></div>
+                    <div class="descricao">
+                      Um delicioso e saboroso Chocolite Mousse
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 8,00</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('pave',15.50)"
+                  class="sobremesa pave"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA2UQliO-xQK1p6C4LOVY5cPahVbJmzgcOMg&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Pavê</strong></div>
+                    <div class="descricao">Um delicioso e saboroso Pavê</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 15,50</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('fruitSalad',10.00)"
+                  class="sobremesa fruitSalad"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWiPohfAhTf9mWTFmEWu-RPhrS0YO9QgJYaQ&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Fruit Salad</strong></div>
+                    <div class="descricao">
+                      Um delicioso e saboroso Frut salad
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 10,00</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('popsicle',5.00)"
+                  class="sobremesa popsicle"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS68NzdLiXi9aH-eK3gJG2p0jFCNT8M05c1Cg&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Popsicle</strong></div>
+                    <div class="descricao">
+                      Um delicioso e saboroso Popsicle
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 5,00</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('brownie',16.50)"
+                  class="sobremesa brownie"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYRMEFFlD7Cst2evvGBwHNfVqqwc_q70hRrg&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Brownie</strong></div>
+                    <div class="descricao">Um delicioso e saboroso Brownie</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 16,50</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('dulceDeLeche',17.50)"
+                  class="sobremesa dulceDeLeche"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZKfjijSkCimYWvP-JMU3WuUb6uhAf2VCtJA&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>Dulce de Leche</strong></div>
+                    <div class="descricao">
+                      Um delicioso e saboroso Dulce de Leche
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 17,50</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('sMores',12.50)"
+                  class="sobremesa sMores"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLCHwg32ka7FkedF5husKYxj0-pPG1Qz7wtA&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo"><strong>S´Mores</strong></div>
+                    <div class="descricao">Um delicioso e saboroso S´Mores</div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 12,50</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  onclick="selecionarSobremesa('strawberryWithChocolate',6.50)"
+                  class="sobremesa strawberryWithChocolate"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvAbxL_Fl9a4NOIxyYIeoKCfZjck9aKKLi8A&s"
+                    alt=""
+                  />
+                  <div class="informacoes">
+                    <div class="titulo">
+                      <strong>Strawberry With Chocolate</strong>
+                    </div>
+                    <div class="descricao">
+                      Um delicioso e saboroso Strawberry With Chocolate
+                    </div>
+                    <div class="valor">
+                      <strong>
+                        <R1>R$ 6,50</R1>
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer>
+            <a class="continuar" onclick="carrinho()"
+              >Selecione 1 item de cada categoria</a
+            >
+          </footer>
+        </div>
+      </div>
+      <!-- tela de ver o carrinho e fazer o pedido -->
+      <div class="telaDeResumo escondido">
+        <div class="boxTelaDeResumo">
+          <h1><strong>CodeTimeFood</strong></h1>
+
+          <div class="resumoPrato"></div>
+          <div class="resumoDrink"></div>
+          <div class="resumoSobremesa"></div>
+          <div class="total"></div>
+
+          <a onclick="whatsApp()">Fazer pedido</a>
+        </div>
+      </div>
+    </div>
+    <script src="./src/app.js"></script>
+  </body>
+</html>
